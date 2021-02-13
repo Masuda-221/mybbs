@@ -1,7 +1,87 @@
+@import url("css/color");
+
 body {
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #fff;
-  color: #000;
+  background-color: #fef6e4;
+  color: #001858;
 }
 
+.btn-primary{
+  background-color: #8bd3dd;
+  color: #001858;
+  border:none;
+}
+
+.edit-button{
+  background-color: #f582ae;
+  color: #001858;
+  border:none;
+}
+
+.btn-secondary{
+  background-color: #8bd3dd;
+  color: #001858;
+  border:none;
+}
+
+.delete-button{
+  background-color: #f582ae;
+  color: #001858;
+  border:none;
+}
+
+.form-control{
+  background-color: #fffffe;
+  color: #001858;
+  border:none;
+}
+
+.card-footer{
+  background-color: #f3d2c1;
+  color: #001858;
+  padding: 1rem 3rem 3rem 3rem;
+  border-top:none;
+}
+.card-body{
+  background-color: #f3d2c1;
+  padding: 1rem 3rem 0rem 3rem;
+  color: #001858;
+}
+
+.card-header{
+  background-color: #f3d2c1;
+  border-bottom:none;
+  padding: 3rem 3rem 0rem 3rem;
+  color: #001858;
+}
+
+.card{
+  border:none;
+}
+.name-colom {
+  font-weight: 600;
+}
+.date-colom{
+  font-weight: 100;
+}
+.comment-name{
+  font-weight: 600;
+}
+.comment-body {
+  font-weight: 100;
+}
+
+.navbar-mybbs{
+  background-repeat: no-repeat;
+  background-color: #fef6e4;
+  color: #001858;
+}
+
+.navbar-brand {
+  color: #001858;
+}
+
+.nav-link{
+  color: #001858;
+}

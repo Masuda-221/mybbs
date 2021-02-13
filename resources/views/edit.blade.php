@@ -30,7 +30,7 @@
                 <input type="hidden" name="id" value="{{ $posts->id }}">
                 {{ csrf_field() }}
                 <input type="submit" class="btn btn-primary" value="更新">
-                <a href="{{ action('PostController@delete', ['id' => $posts->id]) }}" class="btn btn-secondary">削除</a>
+                <a href="{{ action('PostController@delete', ['id' => $posts->id]) }}" class="delete-button btn btn-secondary">削除</a>
         </form>
     </div>
 @endsection
