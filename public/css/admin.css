@@ -76,6 +76,7 @@ body {
   background-repeat: no-repeat;
   background-color: #fef6e4;
   color: #001858;
+  padding:1rem 2rem 3rem 2rem;
 }
 
 .navbar-brand {
@@ -85,3 +86,4 @@ body {
 .nav-link{
   color: #001858;
 }
+

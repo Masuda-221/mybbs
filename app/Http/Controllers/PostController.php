@@ -63,7 +63,7 @@ class PostController extends Controller
         // 該当するデータを上書きして保存する
         $posts->fill($posts_form)->save();
         
-        return redirect('index');
+        return redirect('/');
     }
     
     public function delete(Request $request)
@@ -71,6 +71,6 @@ class PostController extends Controller
         $posts = Post::find($request->id);
         
         $posts->delete();
-        return redirect('index');
+        return redirect('/');
     }  
 }

@@ -17,13 +17,13 @@ class CommentController extends Controller
         $comment->name = $request->name;
         $comment->post_id = $request->post_id;
         $comment->save();
-        return redirect('index');
+        return redirect('/');
     }
     
     public function commentsdestroy(Request $request)
     {
         $comment = Comment::find($request->comment_id);
         $comment->delete();
-        return redirect('index');
+        return redirect('/');
     }
 }
