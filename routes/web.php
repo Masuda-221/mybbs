@@ -22,6 +22,6 @@ Route::get('edit', 'PostController@edit');
 Route::post('edit', 'PostController@update');
 Route::get('delete', 'PostController@delete');
 //コメント投稿
-Route::post('posts/{comment_id}/comments', 'CommentsController@commentsstore');
+Route::post('/posts/{comment_id}/comments', 'CommentController@commentsstore');
 //コメント取り消し
-Route::get('comments/{comment_id}', 'CommentsController@commentsdestroy');
+Route::get('/comments/{comment_id}', 'CommentController@commentsdestroy');

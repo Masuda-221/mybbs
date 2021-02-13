@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use App\Comment;
 use Validator;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
@@ -33,10 +34,10 @@ class PostController extends Controller
     
     public function index(Request $request)
     {
-        $posts = Post::all();
-        dd($posts);
         
-        
+        // $posts = Post::all()->paginate(5);
+        $posts = Post::query()->paginate(5);
+        // $posts = DB::table('posts')
         return view('index', ['posts' => $posts,]);
     }
 

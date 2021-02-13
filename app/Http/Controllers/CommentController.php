@@ -11,9 +11,10 @@ class CommentController extends Controller
 {
     public function commentsstore(Request $request)
     {
-       
+        
         $comment = new Comment;
         $comment->body = $request->body;
+        $comment->name = $request->name;
         $comment->post_id = $request->post_id;
         $comment->save();
         return redirect('index');

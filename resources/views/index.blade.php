@@ -3,7 +3,6 @@
 
 @section('content')
     <div class="container">
-        <form action="{{ action('PostController@index') }}" method="get">
             @foreach($posts as $post)
             <div class="card text-center mt-3">
                 <div class="card-header">
@@ -23,31 +22,34 @@
                 <div class="card-footer text-muted">
                 
                     <div id="comment-post-{{ $post->id }}">
-                    @foreach ($posts->comments as $comment) 
+                    @foreach ($post->comments as $comment) 
                         <div class="mb-2">
                             <span>
                             <strong>
-                                <a class="no-text-decoration black-color">{{ $comment->post->name }}</a>
+                                <a class="no-text-decoration black-color">{{ $comment->name }}</a>
                             </strong>
                             </span>
                             <span>{{ $comment->body }}</span>
                         </div>
                     @endforeach
                     </div>
-                    @Auth
-                        <div class="row actions" id="comment-form-post-{{ $post->id }}">
-                            <form class="w-100" id="new_comment" action="/posts/{{ $post->id }}/comments" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
-                                {{csrf_field()}} 
-                                
-                                <input value="{{ $post->id }}" type="hidden" name="post_id" />
-                                <input class="form-control comment-input border-0" placeholder="コメント ..." autocomplete="off" type="text" name="body" />
-                            </form>
-                        </div>
-                    @endauth
+                    <div class="row actions" id="comment-form-post-{{ $post->id }}">
+                        <form action="/posts/{{ $post->id }}/comments" method="post" enctype="multipart/form-data">
+                        <form class="w-100" id="new_comment" action="/posts/{{ $post->id }}/comments" accept-charset="UTF-8" data-remote="true" method="post">
+                            <input name="utf8" type="hidden" value="&#x2713;" />
+                            {{csrf_field()}} 
+                            
+                            <input value="{{ $post->id }}" type="hidden" name="post_id" />
+                            <input type="text" class="form-control" placeholder="名前" name="name" value="{{ old('name') }}">
+                            
+                            <textarea class="form-control"  placeholder="コメント ..." name="body" rows="1">{{ old('body') }}</textarea>
+                            <input type="submit" class="btn btn-primary" value="投稿">
+                        </form>
+                    </div>
+                    
                 </div>
             </div>
             @endforeach
-            
-        </from>
+        {{ $posts->links('vendor.pagination.default') }}
     </div>
 @endsection
