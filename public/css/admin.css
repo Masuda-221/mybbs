@@ -4,6 +4,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-color: #fef6e4;
+  font-family: "Gill Sans", sans-serif;
   color: #001858;
 }
 
@@ -75,6 +76,7 @@ body {
 .navbar-mybbs{
   background-repeat: no-repeat;
   background-color: #fef6e4;
+  font-family: "Gill Sans", sans-serif;
   color: #001858;
   padding:1rem 2rem 3rem 2rem;
 }
