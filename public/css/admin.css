@@ -1,13 +1,22 @@
-@import url("css/color");
-
 body {
   background-repeat: no-repeat;
   background-position: center;
   background-color: #fef6e4;
-  font-family: "Gill Sans", sans-serif;
   color: #001858;
 }
+.navbar{
+  padding:1rem 2rem 3rem 2rem;
+  color: #001858;
+}
+.nav-mybbs{
+  font-weight: 800;
+  font-size: 30px;
+  
+}
 
+.navmybbs{
+  color: #001858;
+}
 .btn-primary{
   background-color: #8bd3dd;
   color: #001858;
@@ -73,19 +82,19 @@ body {
   font-weight: 100;
 }
 
-.navbar-mybbs{
-  background-repeat: no-repeat;
-  background-color: #fef6e4;
-  font-family: "Gill Sans", sans-serif;
-  color: #001858;
-  padding:1rem 2rem 3rem 2rem;
-}
+/*.navbar-mybbs{*/
+/*  background-repeat: no-repeat;*/
+/*  background-color: #fef6e4;*/
+  /*font-family: "Gill Sans", sans-serif;*/
+/*  color: #001858;*/
+/*  padding:1rem 2rem 3rem 2rem;*/
+/*}*/
 
-.navbar-brand {
-  color: #001858;
-}
+/*.navbar-brand {*/
+/*  color: #001858;*/
+/*}*/
 
-.nav-link{
-  color: #001858;
-}
+/*.nav-link{*/
+/*  color: #001858;*/
+/*}*/
 

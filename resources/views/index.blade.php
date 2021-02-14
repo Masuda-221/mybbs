@@ -55,6 +55,12 @@
                 </div>
             </div>
             @endforeach
-        {{ $posts->links('vendor.pagination.default') }}
+        <div class="row mt-5">
+            <div class="pagenation col-md-12">
+                
+            
+            {{ $posts->links() }}
+            </div>
+        </div>
     </div>
 @endsection
