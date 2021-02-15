@@ -10,7 +10,7 @@ class Post extends Model
     public $fillable = ['name', 'body'];
     
     public static $rules = array(
-        'name' => 'required',
+        'name' => 'required|max:64',
         'body' => 'required',
     );
     

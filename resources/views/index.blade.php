@@ -36,6 +36,13 @@
                     
                         <div id="comment-form-post-{{ $post->id }}">
                             <form action="/posts/{{ $post->id }}/comments" method="post" enctype="multipart/form-data">
+                                @if (count($errors) > 0)
+                                    <ul>
+                                    @foreach($errors->all() as $e)
+                                        <li>{{ $e }}</li>
+                                    @endforeach
+                                    </ul>
+                                @endif
                                 {{csrf_field()}} 
                                 <div class="row">
                                     <div class="col-md-2">

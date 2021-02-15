@@ -12,6 +12,8 @@ class CommentController extends Controller
     public function commentsstore(Request $request)
     {
         
+        $this->validate($request,Post::$rules);
+        
         $comment = new Comment;
         $comment->body = $request->body;
         $comment->name = $request->name;
