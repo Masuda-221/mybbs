@@ -23,6 +23,9 @@ body {
   border:none;
 }
 
+.btn{
+  border-radius: 0rem!important;
+}
 .edit-button{
   background-color: #f582ae;
   color: #001858;

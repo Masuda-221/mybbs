@@ -9,12 +9,31 @@ use Validator;
 
 class CommentController extends Controller
 {
-    public function commentsstore(Request $request)
+    public function add(Request $request)
+    {
+        $post = Post::find($request->post_id);
+        
+      if (empty($post)) {
+        abort(404);    
+      }
+      return view('commentcreate', ['post_form' => $post]);
+  }
+    
+    public function store(Request $request)
     {
         
-        $this->validate($request,Post::$rules);
+        $this->validate($request,Comment::$rules);
         
         $comment = new Comment;
+        // $form = $request->all();
+        
+        // unset($form['_token']);
+        
+        
+        // $comment->fill($form);
+        
+        // $comment->save();
+        // return redirect('/');
         $comment->body = $request->body;
         $comment->name = $request->name;
         $comment->post_id = $request->post_id;
@@ -22,7 +41,7 @@ class CommentController extends Controller
         return redirect('/');
     }
     
-    public function commentsdestroy(Request $request)
+    public function destroy(Request $request)
     {
         $comment = Comment::find($request->comment_id);
         $comment->delete();
