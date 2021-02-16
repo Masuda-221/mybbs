@@ -41,8 +41,8 @@
                 
                 <div class="card-footer text-muted">
                     
-                    <div class="col-md-1 offset-md-5">
-                        <a href="{{ action('CommentController@add', ['id' => $post->id]) }}" class="btn btn-primary btn-block">返信</a>
+                    <div class="col-md-2 offset-md-5">
+                        <a href="{{ action('CommentController@add', ['id' => $post->id]) }}" class="btn btn-primary btn-block">コメント</a>
                     </div>
                 
                     
